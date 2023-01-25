@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Island+Moments&family=Kolker+Brush&family=Oswald:wght@600&display=swap');
+body{
+    font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
+}

@@ -1,0 +1,67 @@
+<!-- navigation bar -->
+<div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5 pt-3 fs-4 text-danger-emphasis" routerLink="/dashboard"><i
+                    class="fa-solid fa-building-columns"></i>&nbsp;
+                <span>
+                    Online Bank
+                </span> </a>
+
+        </div>
+    </nav>
+</div>
+
+<!-- table -->
+
+<div class="container mt-2">
+
+    <div class="row">
+        
+    <h2 style="text-align: center;" class="text-primary">Transactions</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae amet, nulla voluptatum ipsum rem minus nihil?
+        Architecto pariatur commodi vel odio facilis id harum illum nam voluptatem, incidunt minus dolor.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae amet, nulla voluptatum ipsum rem minus nihil?
+        Architecto pariatur commodi vel odio facilis id harum illum nam voluptatem, incidunt minus dolor</p>
+
+        <div class="container border p-3 mt-5">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h3 class="text-success">Transaction History</h3>
+                </div>
+                <div class="col-lg-4">
+                    <label for="search">Search By:</label>&nbsp;
+                    <input (keyup)="search($event)" type="text" id="search" placeholder="Transaction type">
+                    
+                </div>
+                <div class="col-lg-4">
+                    <input (click)="generatePDF()" type="text" value="export" name="" class="btn btn-success ">
+                </div>
+
+            </div>
+        
+
+        <table class="table mt-5 pt-5 ">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Transaction Type</th>
+                    <th scope="col">From Account</th>
+                    <th scope="col">To Account</th>
+                    <th scope="col">Amount</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                <tr *ngFor="let transaction of allTransactions | filter: searchKey :'type'; let i = index">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{transaction.type}}</td>
+                    <td>{{transaction.fromAcno}}</td>
+                    <td>{{transaction.toAcno}}</td>
+                    <td>{{transaction.amount}}</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+    </div>

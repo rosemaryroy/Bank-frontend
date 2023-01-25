@@ -1,0 +1,13 @@
+<div *ngIf="item" class="container text-center mt-5">
+    <div class="row mt-5">
+        <div class="col-lg-3 mt-5"></div>
+        <div class="col-lg-4 border p-5">
+            <p>Are you sure you want to delete your account {{item}} permenantly?</p>
+            <button (click)="deleteAcc()" class="btn btn-danger">Yes</button>&nbsp; &nbsp;
+            <button (click)="cancel()" class="btn btn-success">No</button>
+        </div>
+        <div class="col-lg-4">
+
+        </div>
+    </div>
+</div>
